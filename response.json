@@ -1,0 +1,33 @@
+// result json error
+{
+	code:(int),
+	error: {
+		code : (int),
+		message : {
+		// array list string
+		}
+	}
+}
+
+// result json
+{
+	status : (string),
+	code : (int),
+	data : {
+	// array data
+	}
+}
+
+// example
+{
+	'status' : 'ok',
+	'code' : 200,
+	'data' : {
+		'funnypage' : {
+			'slug' : 'funnypage',
+			'new_version' : '1.2',
+			'url' : 'http://google.com',
+			'package' : 'http://download.themesip.com/funnypage/v/1.2.zip'
+		}
+	}
+}
