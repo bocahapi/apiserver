@@ -14,8 +14,6 @@ namespace {
 
     // method POST
     $app->post('/user[/]', 'Users:addUser');
-
-    // method PUT
     $app->post('/user/{id:[0-9]+}', 'Users:update');
 
     // method DELETE
