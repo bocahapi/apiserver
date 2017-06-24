@@ -1,9 +1,14 @@
 <?php
-$container = $app->getContainer();
-$app->get('/', function($request, $response) {
-	return "im ok";
-});
+namespace {
 
-$user = new \App\Controller\Users();
+    use Psr\Http\Message\ResponseInterface;
+    use Psr\Http\Message\ServerRequestInterface;
 
-$app->get('/all', [ $user, 'index']);
+    $container = $app->getContainer();
+    $app->get('/', function (ServerRequestInterface $request, ResponseInterface $response) {
+        return "im ok";
+    });
+
+    $app->map(['GET', 'POST'], '/users[/{id}]', 'Users:index');
+
+}
